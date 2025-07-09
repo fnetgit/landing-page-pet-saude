@@ -49,6 +49,8 @@ h1 {
     font-size: 2.8rem;
     line-height: 1.2;
     color: var(--white);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h2 {
@@ -169,26 +171,27 @@ p {
     line-height: 1.5;
 }
 
-/* Features Grid (Sobre o Projeto) */
-.features-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
-    margin-top: 3rem;
-}
-
-.feature-item {
-    text-align: center;
-    padding: 30px;
+/* Classe Base para Cards */
+.card {
+    padding: 25px;
     background-color: var(--white);
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
 }
 
-.feature-item:hover {
+.card:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Features Grid (Sobre o Projeto) */
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 3rem;
 }
 
 .feature-item i {
@@ -201,23 +204,22 @@ p {
 .process-steps {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 25px;
     margin-top: 3rem;
 }
 
 .step-item {
-    text-align: center;
     position: relative;
-    padding: 20px;
-    background-color: var(--white);
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.step-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+.step-item h3 {
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.step-item p {
+    font-size: 1rem;
+    color: #666;
 }
 
 .step-icon {
@@ -234,15 +236,6 @@ p {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.step-item h3 {
-    color: var(--text-color);
-    font-weight: 700;
-}
-
-.step-item p {
-    font-size: 1rem;
-    color: #666;
-}
 
 /* Impact Section */
 .impact-cards {
@@ -253,21 +246,13 @@ p {
 }
 
 .impact-card {
-    background-color: var(--white);
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.impact-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    text-align: left;
 }
 
 .impact-card h3 {
     color: var(--secondary-color);
     margin-bottom: 1.5rem;
+    text-align: left;
 }
 
 .impact-card ul {
@@ -322,17 +307,6 @@ footer {
     padding: 30px 0;
     font-size: 0.9rem;
 }
-
-footer a {
-    color: var(--white);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: var(--primary-color);
-}
-
 
 /* MEDIA QUERIES (PARA TELAS MAIORES) */
 

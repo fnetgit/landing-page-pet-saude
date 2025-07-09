@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+    // --- LÓGICA PARA ROLAGEM SUAVE ---
     const links = document.querySelectorAll('a[href^="#"]');
 
     for (const link of links) {
@@ -16,4 +18,10 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    const yearSpan = document.getElementById('current-year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+
 });
