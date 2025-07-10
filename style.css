@@ -175,7 +175,7 @@ p {
 }
 
 .logos img {
-    max-width: 60px;
+    max-width: 75px;
     height: auto;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
@@ -331,7 +331,7 @@ footer {
 /* Telas pequenas-médias */
 @media (min-width: 576px) {
     .logos img {
-        max-width: 80px;
+        max-width: 75px;
     }
 
     h1 {
@@ -364,7 +364,7 @@ footer {
 /* Telas de tablet */
 @media (min-width: 768px) {
     .logos img {
-        max-width: 90px;
+        max-width: 80px;
     }
 
     h1 {
@@ -402,7 +402,7 @@ footer {
 /* Telas de desktop */
 @media (min-width: 992px) {
     .logos img {
-        max-width: 100px;
+        max-width: 110px;
     }
 
     h1 {
