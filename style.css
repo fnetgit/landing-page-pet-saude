@@ -304,6 +304,14 @@ p {
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
 
+.logos .logo-pet {
+    background-color: white;
+    border-radius: 12px;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
 .hero-section .subtitle {
     font-size: 1.1rem;
     margin-bottom: 2rem;
@@ -345,7 +353,7 @@ p {
 .process-steps {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 30px;
     margin-top: 3rem;
 }
 
