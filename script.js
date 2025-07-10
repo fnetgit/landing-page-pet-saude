@@ -1,13 +1,29 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    // --- LÓGICA PARA ROLAGEM SUAVE ---
-    const links = document.querySelectorAll('a[href^="#"]');
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    const navLinks = document.querySelectorAll(".nav-link");
 
-    for (const link of links) {
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    });
+
+    navLinks.forEach(link => link.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+    }));
+
+
+    const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
+
+    for (const link of smoothScrollLinks) {
         link.addEventListener('click', function (e) {
             e.preventDefault();
 
             const targetId = this.getAttribute('href');
+            if (targetId === "#") return;
+            
             const targetElement = document.querySelector(targetId);
 
             if (targetElement) {
