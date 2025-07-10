@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const targetId = this.getAttribute('href');
             if (targetId === "#") return;
-            
+
             const targetElement = document.querySelector(targetId);
 
             if (targetElement) {
