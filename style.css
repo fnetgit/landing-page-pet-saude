@@ -199,7 +199,7 @@ p {
 .section-intro {
     max-width: 800px;
     margin: 0 auto 3rem auto;
-    text-align: center;
+    text-align: justify;
 }
 
 /* Botões */
