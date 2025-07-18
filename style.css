@@ -152,7 +152,7 @@ html {
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: var(--text-color);
 }
@@ -462,10 +462,6 @@ footer {
 
 /* Telas pequenas-médias */
 @media (min-width: 576px) {
-    .logos img {
-        max-width: 75px;
-    }
-
     h1 {
         font-size: 3rem;
     }
