@@ -1,4 +1,4 @@
-/* Variáveis para cores e fontes */
+/* Variáveis para cores, fontes e dimensões */
 :root {
     --primary-color: #3aa8d9;
     --primary-dark: #04517b;
@@ -9,6 +9,7 @@
     --black-color: #000;
     --font-heading: 'Poppins', sans-serif;
     --font-body: 'Roboto', sans-serif;
+    --navbar-height: 95px;
 }
 
 /* Reset Básico */
@@ -29,7 +30,8 @@ body {
 }
 
 html {
-    scroll-padding-top: 80px;
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--navbar-height);
 }
 
 
@@ -46,6 +48,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: var(--navbar-height);
     padding: 0.5rem 0;
     background-color: var(--white);
     position: fixed;
@@ -85,7 +88,7 @@ html {
     align-items: center;
     position: fixed;
     right: -100%;
-    top: 95px;
+    top: var(--navbar-height);
     background-color: var(--white);
     width: 45%;
     padding-top: 2rem;
@@ -133,6 +136,9 @@ html {
 .hamburger {
     display: block;
     cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
 }
 
 .hamburger.active .bar:nth-child(2) {
@@ -153,10 +159,8 @@ html {
     height: 3px;
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
     background-color: var(--text-color);
 }
-
 
 /* Tipografia Base */
 h1,
@@ -270,11 +274,11 @@ p {
     align-items: center;
     justify-content: center;
     padding: 60px 0;
-    margin-top: 80px;
+    margin-top: var(--navbar-height);
     overflow: hidden;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        linear-gradient(135deg, rgba(0, 123, 255, 0.9), rgba(40, 167, 69, 0.9));
+        linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     background-size: cover;
     background-position: center;
 }
@@ -504,6 +508,7 @@ footer {
         height: auto;
         background-color: transparent;
         padding-top: 0;
+        top: auto;
     }
 
     .nav-item {

@@ -7,33 +7,24 @@ document.addEventListener('DOMContentLoaded', function () {
     hamburger.addEventListener("click", () => {
         hamburger.classList.toggle("active");
         navMenu.classList.toggle("active");
+
+        const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+        hamburger.setAttribute('aria-expanded', !isExpanded);
+
+        if (!isExpanded) {
+            hamburger.setAttribute('aria-label', 'Fechar menu');
+        } else {
+            hamburger.setAttribute('aria-label', 'Abrir menu');
+        }
     });
 
     navLinks.forEach(link => link.addEventListener("click", () => {
         hamburger.classList.remove("active");
         navMenu.classList.remove("active");
+
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Abrir menu');
     }));
-
-
-    const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
-
-    for (const link of smoothScrollLinks) {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute('href');
-            if (targetId === "#") return;
-
-            const targetElement = document.querySelector(targetId);
-
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    }
 
     const yearSpan = document.getElementById('current-year');
     if (yearSpan) {
